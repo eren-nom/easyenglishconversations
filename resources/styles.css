@@ -1,0 +1,152 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #353535;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #f1bcc5;
+    color: #353535;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+
+header h2 {
+    font-size: 2em;
+    font-weight: 300;
+    margin-top: 0.2em;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;             /* Create a flex container */
+    background-color: #4e4e4e;
+    padding: 0.5em 0;
+    justify-content: center;   /* Center the items horizontally */
+}
+
+nav ul {
+    list-style: none;          /* Remove default list styling */
+    margin: 0;                 /* Remove default margin */
+    padding: 0;                /* Remove default padding */
+    display: flex;             /* Arrange the li items in a row */
+}
+
+nav ul li {
+    margin: 0 50px;            /* Apply horizontal margin to create space between li items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f1bcc5;
+}
+
+
+/* Main Section */
+main {
+    width: 55%;
+    margin: 0 auto;
+}
+
+
+/* Grid Container and Squares */
+.grid-container {
+    display: grid; /* Switch to grid layout */
+    grid-template-columns: repeat(10, 1fr); /* Create 10 equal-width columns */
+    grid-template-rows: repeat(5, 1fr); /* Create 5 equal-height rows */
+    gap: 10px; /* Space between grid items */
+    justify-items: center; /* Center the items inside each grid cell */
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.square {
+    background-color: #f1bcc5; /* Original background color */
+    color: #f9f9f9; /* Original text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    aspect-ratio: 1; /* Ensures the square has a 1:1 aspect ratio */
+    width: 100%; /* Take up full width of the grid cell */
+    height: auto; /* Adjust height to match the width due to aspect ratio */
+}
+
+.square a {
+    text-decoration: none;
+    color: #353535; /* Original link color */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square:hover {
+    background-color: #f7aab8; /* Original hover background color */
+    transform: scale(1.1);
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333333;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+    }
+
+    .square {
+        width: 50px;
+        height: 50px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+    }
+
+    .square {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9em;
+    }
+}
