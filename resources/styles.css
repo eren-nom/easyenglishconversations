@@ -112,6 +112,31 @@ main {
     transform: scale(1.1);
 }
 
+/* Responsive Design for Smaller Screens */
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    }
+
+    .square {
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+
+    .square {
+        font-size: 0.9em; /* Adjust font size for small screens */
+    }
+}
+
+
 
 /* Footer Styling */
 footer {
