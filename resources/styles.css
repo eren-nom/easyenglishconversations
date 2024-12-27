@@ -3,15 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid red;
 }
 
-body {
+html, body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #353535;
     margin: 0;
     padding: 0;
+
 }
 
 /* Header Styling */
@@ -35,21 +37,21 @@ header h2 {
 
 /* Navigation Bar */
 nav {
-    display: flex;             /* Create a flex container */
+    display: flex;          
     background-color: #4e4e4e;
     padding: 0.5em 0;
-    justify-content: center;   /* Center the items horizontally */
+    justify-content: center; 
 }
 
 nav ul {
-    list-style: none;          /* Remove default list styling */
-    margin: 0;                 /* Remove default margin */
-    padding: 0;                /* Remove default padding */
-    display: flex;             /* Arrange the li items in a row */
+    list-style: none;        
+    margin: 0;                
+    padding: 0;              
+    display: flex;             
 }
 
 nav ul li {
-    margin: 0 50px;            /* Apply horizontal margin to create space between li items */
+    margin: 0 50px;           
 }
 
 nav ul li a {
@@ -65,24 +67,26 @@ nav ul li a:hover {
 
 /* Main Section */
 main {
-    width: 55%;
+    width: 70%;
     margin: 0 auto;
 }
 
 /* Grid Container and Squares */
 .grid-container {
-    display: grid; /* Switch to grid layout */
-    grid-template-columns: repeat(5, 1fr); /* 5 columns */
-    grid-template-rows: repeat(10, 1fr); /* 10 rows */
-    gap: 10px; /* Space between grid items */
-    justify-items: center; /* Center the items inside each grid cell */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 10px; 
+    justify-items: center; 
     padding: 20px;
     margin-top: 30px;
-}
+    margin-left: auto;
+    margin-right: auto;
+    }
+
 
 .square {
-    background-color: #f1bcc5; /* Original background color */
-    color: #f9f9f9; /* Original text color */
+    background-color: #f1bcc5; /
+    color: #f9f9f9; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,61 +118,59 @@ main {
 
 /* For screens 768px and below */
 @media (max-width: 768px) {
+
+    .grid-container {
+        grid-template-columns: repeat(7, 1fr); 
+        grid-template-rows: repeat(8, 1fr); 
+    }
+
     .square {
-        font-size: 1em; /* Adjust font size */
-        width: 80px; /* Shrink width */
-        height: 80px; /* Shrink height */
+        font-size: 1em; 
+        width: 60px; 
+        height: 60px; 
     }
 
     header h1 {
-        font-size: 2.5em; /* Shrink h1 size for mobile */
+        font-size: 2.5em; 
     }
 
     header h2 {
-        font-size: 1.8em; /* Shrink h2 size for mobile */
+        font-size: 1.8em; 
     }
 
     main {
-        width: 60%;
+        width: 80%;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 670px) {
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr); 
+        grid-template-rows: repeat(10, 1fr); 
     }
 }
 
 /* For screens 480px and below */
 @media (max-width: 480px) {
+
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr); 
+        grid-template-rows: repeat(10, 1fr); 
+    }
+
     .square {
-        font-size: 0.8em; /* Adjust font size for small screens */
-        width: 50px; /* Further shrink width for very small screens */
-        height: 50px; /* Further shrink height for very small screens */
+        font-size: 0.8em; 
+        width: 50px; 
+        height: 50px; 
     }
 
     header h1 {
-        font-size: 2em; /* Further shrink h1 size for very small screens */
+        font-size: 2em; 
     }
 
     header h2 {
-        font-size: 1.5em; /* Further shrink h2 size for very small screens */
-    }
-
-    main {
-        width: 90%;
-    }
-}
-
-/* For screens 375px and below */
-
-@media (max-width: 375px) {
-    .square {
-        font-size: 0.8em; /* Adjust font size for small screens */
-        width: 50px; /* Further shrink width for very small screens */
-        height: 50px; /* Further shrink height for very small screens */
-    }
-
-    header h1 {
-        font-size: 2em; /* Further shrink h1 size for very small screens */
-    }
-
-    header h2 {
-        font-size: 1.5em; /* Further shrink h2 size for very small screens */
+        font-size: 1.5em; 
     }
 
     main {
@@ -176,17 +178,83 @@ main {
     }
 }
 
-/* For screens 1200px and above (Large screens like TVs) */
-@media (min-width: 1200px) {
+/* For screens 375px and below */
+
+@media (max-width: 375px) {
     .grid-container {
-        grid-template-columns: repeat(10, 1fr); /* 10 columns */
-        grid-template-rows: repeat(5, 1fr); /* 5 rows */
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(13 1fr); 
+    }
+    .square {
+        font-size: 0.8em; 
+        width: 50px; 
+        height: 50px; 
+    }
+
+    header h1 {
+        font-size: 2em; 
+    }
+
+    header h2 {
+        font-size: 1.5em; 
+    }
+
+    main {
+        width: 100%;
+        gap: 2px;
+    }
+}
+
+/*For screens from 769px - 1023px */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+ 
+    .grid-container {
+        grid-template-columns: repeat(8, 1fr); 
+        grid-template-rows: repeat(7, 1fr); 
     }
 
     .square {
-        width: 80px; /* Adjust square size for large screens */
-        height: 80px; /* Maintain square aspect */
-        font-size: 1.8em; /* Larger font size for readability */
+        width: 50px; 
+        height: 50px;
+        font-size: 1.2em; 
+    }
+
+    .main {
+        width: 100%;
+    }
+}
+
+/* For screens 1024px and above (Large screens like TVs) */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(10, 1fr); 
+        grid-template-rows: repeat(5, 1fr); 
+    }
+
+    .square {
+        width: 50px; 
+        height: 50px;
+        font-size: 1.2em; 
+    }
+
+    .main {
+        width: 100%;
+    }
+}
+
+
+/* For screens 1200px and above (Large screens like TVs) */
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(10, 1fr); 
+        grid-template-rows: repeat(5, 1fr); 
+    }
+
+    .square {
+        width: 60px; 
+        height: 60px; 
+        font-size: 1.5em; 
     }
 }
 
