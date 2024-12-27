@@ -24,14 +24,9 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 4em;
     margin-bottom: 0.2em;
-}
-
-header h2 {
-    font-size: 2em;
-    font-weight: 300;
-    margin-top: 0.2em;
+    padding-top: 0.5em;
 }
 
 /* Navigation Bar */
@@ -42,26 +37,12 @@ nav {
     justify-content: center; 
 }
 
-nav ul {
-    list-style: none;        
-    margin: 0;                
-    padding: 0;              
-    display: flex;             
-}
 
-nav ul li {
-    margin: 0 50px;           
-}
-
-nav ul li a {
+nav h2 {
     text-decoration: none;
     color: #f9f9f9;
-    font-size: 1.2em;
+    font-size: 2em;
     transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #f1bcc5;
 }
 
 /* Main Section */
@@ -69,6 +50,19 @@ main {
     width: 70%;
     margin: 0 auto;
 }
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 20px; 
+}
+
+.book-cover {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* Grid Container and Squares */
 .grid-container {
@@ -133,8 +127,8 @@ main {
         font-size: 2.5em; 
     }
 
-    header h2 {
-        font-size: 1.8em; 
+    nav h2 {
+        font-size: 1.5em;
     }
 
     main {
@@ -168,9 +162,10 @@ main {
         font-size: 2em; 
     }
 
-    header h2 {
-        font-size: 1.5em; 
+    nav h2 {
+        font-size: 1em;
     }
+
 
     main {
         width: 100%;
@@ -194,8 +189,8 @@ main {
         font-size: 2em; 
     }
 
-    header h2 {
-        font-size: 1.5em; 
+    nav h2 {
+        font-size: 1em;
     }
 
     main {
@@ -240,6 +235,7 @@ main {
     .main {
         width: 100%;
     }
+    
 }
 
 
