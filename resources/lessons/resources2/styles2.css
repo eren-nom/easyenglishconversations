@@ -102,6 +102,31 @@ main {
     transform: scale(0.98); /* Slightly shrinks the button on click */
 }
 
+.back-to-main {
+    font-size: 1.1em;
+    text-align: center; /* Center the text */
+    margin-top: 30px; /* Add some space from the content above */
+}
+
+/* Style for the link */
+.back-to-main a {
+    text-decoration: none; /* Remove underline */
+    color: #353535; /* Link color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Make the link bold */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for the link */
+.back-to-main a:hover {
+    color: blue; /* Change color on hover */
+}
+
+/* Active state for the link */
+.back-to-main a:active {
+    color: blue; /* Change color when clicked */
+}
+
 
 /* Responsive Design */
 
