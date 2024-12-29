@@ -55,7 +55,7 @@ main {
     margin-top: 20px;
 }
 
-.conversations {
+.conversations, .conversations-japanese {
     /* Center the box itself */
     display: flex;
     flex-direction: column;
@@ -69,12 +69,19 @@ main {
     
 }
 
-.conversations p {
+.conversations p, .conversations-japanese p {
     margin: 1em 0.5em 1em 1.5em;
     font-size: 1.5em;
 }
 
+.conversations-japanese {
+        font-size: 0.8em;
+
+}
+
 /* Button Styling */
+
+
 .listen {
     background-color: #F1BCC5; 
     color: #353535;
@@ -107,6 +114,20 @@ main {
     text-align: center; /* Center the text */
     margin-top: 30px; /* Add some space from the content above */
 }
+
+#translation {
+    text-align: center;
+    margin: 0;
+    margin-top: 1em;
+    padding: 0;
+}
+
+#translation a {
+    font-size: 0.7em;
+    color: #353535;
+
+}
+
 
 /* Style for the link */
 .back-to-main a {
