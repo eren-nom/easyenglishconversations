@@ -79,6 +79,7 @@ main {
 
 }
 
+
 /* Button Styling */
 
 
@@ -120,12 +121,23 @@ main {
     margin: 0;
     margin-top: 1em;
     padding: 0;
+    font-size: 1.7em;
 }
 
 #translation a {
     font-size: 0.7em;
     color: #353535;
+    text-decoration: none;
 
+}
+
+#translation a:hover {
+    text-decoration: underline;
+    color: rgb(126, 31, 255);
+}
+
+#translation a:active {
+    color: #353535
 }
 
 
