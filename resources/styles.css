@@ -89,7 +89,6 @@ main {
     aspect-ratio: 1; 
     width: 100%; 
     height: auto; 
-    border: 2px solid #ccc; /* Custom border */
 
 }
     
