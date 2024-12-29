@@ -9,7 +9,7 @@ html, body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
-    color: #353535;
+    color: rgb(53, 53, 53);
     margin: 0;
     padding: 0;
 
@@ -18,7 +18,7 @@ html, body {
 /* Header Styling */
 header {
     background-color: #f1bcc5;
-    color: #353535;
+    color: #4e4e4e;
     text-align: center;
     padding: 1em 0;
 }
@@ -85,7 +85,7 @@ main {
     align-items: center;
     font-size: 1.2em;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     aspect-ratio: 1; /* Ensures the square has a 1:1 aspect ratio */
     width: 100%; /* Take up full width of the grid cell */
@@ -100,6 +100,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px, solid, #333333;
+    border-radius: 10px;
 }
 
 .square:hover {
@@ -177,7 +179,7 @@ main {
 @media (max-width: 375px) {
     .grid-container {
         grid-template-columns: repeat(4, 1fr); 
-        grid-template-rows: repeat(13 1fr); 
+        grid-template-rows: repeat(13, 1fr); 
     }
     .square {
         font-size: 0.8em; 
@@ -256,7 +258,7 @@ main {
 
 /* Footer Styling */
 footer {
-    background-color: #333333;
+    background-color: #4e4e4e;;
     color: #f9f9f9;
     text-align: center;
     padding: 1em 0;

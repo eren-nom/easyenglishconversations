@@ -1,0 +1,226 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #353535;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Header Styling */
+header {
+    background-color: #f1bcc5;
+    color: #353535;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    font-size: 4em;
+    margin-bottom: 0.2em;
+    padding-top: 0.5em;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;          
+    background-color: #4e4e4e;
+    padding: 0.5em 0;
+    justify-content: center; 
+}
+
+
+nav h2 {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+/* Main Section */
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.lessons {
+    margin-top: 20px;
+}
+
+.conversations {
+    /* Center the box itself */
+    display: flex;
+    flex-direction: column;
+    margin: auto; 
+    max-width: 500px; 
+    padding: 30px;
+    background-color: #ffffff; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    
+}
+
+.conversations p {
+    margin: 1em 0.5em 1em 1.5em;
+    font-size: 1.5em;
+}
+
+/* Button Styling */
+.listen {
+    background-color: #F1BCC5; 
+    color: #353535;
+    border: 1px solid #050505;
+    padding: 10px 20px; 
+    font-size: 1em; 
+    border-radius: 5px; 
+    margin: 10px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    max-width: 100%;
+    align-self: center;  /* Align button to the right */
+    margin-top: 2em; 
+}
+
+/* Hover and Active States */
+.listen:hover {
+    background-color: #e2919f; 
+    transform: scale(1.05);
+}
+
+.listen:active {
+    background-color: #f199a8;
+    transform: scale(0.98); /* Slightly shrinks the button on click */
+}
+
+
+/* Responsive Design */
+
+/* For screens 375px and below */
+
+@media (max-width: 375px) {
+    @media (max-width: 480px) {
+
+        header {
+            font-size: 0.5em;
+        }
+    
+        nav {
+            font-size: 0.5em;
+        }
+        
+        section {
+            margin: 20px;
+        }
+        
+        .conversations {
+            padding: 5px;
+            border-radius: 5px; 
+       
+        }
+        
+        .conversations p {
+            margin: 0.5em 0.25em 0.5em 0.75em;
+            font-size: 1.2em;
+        }
+    
+        .listen {
+            width: 40%;
+            margin-bottom: 1em;
+        }
+       
+    
+    }
+ 
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+
+    header {
+        font-size: 0.5em;
+    }
+
+    nav {
+        font-size: 0.5em;
+    }
+    
+    section {
+        margin: 20px;
+    }
+    
+    .conversations {
+        padding: 40px 20px 20px 40px;
+        border-radius: 5px; 
+   
+    }
+    
+    .conversations p {
+        margin: 0.5em 0.25em 0.5em 0.75em;
+        font-size: 1.2em;
+    }
+
+    .listen {
+        width: 35%;
+        margin-bottom: 1em;
+    }
+   
+
+}
+
+/* For Screens 670px and below*/
+@media (max-width: 670px) {
+   
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+
+}
+
+/*For screens from 769px - 1023px */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+ 
+}
+
+/* For screens 1024px and above (Large screens like TVs) */
+@media (min-width: 1024px) {
+    .lessons {
+        margin-top: 30px;
+    }
+    
+    
+}
+
+
+/* For screens 1200px and above (Large screens like TVs) */
+@media (min-width: 1200px) {
+    .lessons {
+        margin-top: 50px;
+    }
+
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: rgb(53, 53, 53);
+    color: #f9f9f9;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    font-size: 0.9em;
+}

@@ -1,0 +1,122 @@
+/*Main colours
+
+top banner = #f1bcc5
+h1 text = #4e4e4e
+
+nav background = #4e4e4e
+nav text = #f9f9f9
+
+main background = #f9f9f9
+
+footer background = #4e4e4e
+footer text = #f9f9f9
+
+*/
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #353535;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Header Styling */
+header {
+    background-color: #f1bcc5;
+    color: #353535;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    font-size: 4em;
+    margin-bottom: 0.2em;
+    padding-top: 0.5em;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;          
+    background-color: #4e4e4e;
+    padding: 0.5em 0;
+    justify-content: center; 
+}
+
+
+nav h2 {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+/* Main Section */
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+
+/* For screens 375px and below */
+
+@media (max-width: 375px) {
+ 
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+
+}
+
+/* For Screens 670px and below*/
+@media (max-width: 670px) {
+   
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+
+}
+
+/*For screens from 769px - 1023px */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+ 
+}
+
+/* For screens 1024px and above (Large screens like TVs) */
+@media (min-width: 1024px) {
+    
+}
+
+
+/* For screens 1200px and above (Large screens like TVs) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: rgb(53, 53, 53);
+    color: #f9f9f9;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    font-size: 0.9em;
+}
