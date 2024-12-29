@@ -119,12 +119,12 @@ main {
 
 /* Hover effect for the link */
 .back-to-main a:hover {
-    color: blue; /* Change color on hover */
+    color: rgb(126, 31, 255); /* Change color on hover */
 }
 
 /* Active state for the link */
 .back-to-main a:active {
-    color: blue; /* Change color when clicked */
+    color: rgb(126, 31, 255); /* Change color when clicked */
 }
 
 
