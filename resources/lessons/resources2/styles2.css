@@ -172,11 +172,11 @@ main {
 @media (max-width: 480px) {
 
     header {
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 
     nav {
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
     
     section {
