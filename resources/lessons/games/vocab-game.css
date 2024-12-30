@@ -1,0 +1,328 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red*/
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #f1bcc5;
+    color: #4e4e4e;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;          
+    background-color: #4e4e4e;
+    padding: 0.5em 0;
+    justify-content: center; 
+}
+
+
+nav h2 {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+/* Game Section Layout */
+.game {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.english-words, .japanese-words {
+    display: flex;
+    flex-direction: column;
+    width: 35%; /* Reduce the width of columns to allow for proper spacing */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.english-words h2, .japanese-words h2 {
+    color: #4e4e4e;
+    text-align: center;
+    padding: 10px;
+
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(241, 188, 197);
+    color: #4e4e4e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.5em;
+    width: 30%;
+}
+
+button:hover {
+    background-color: #f7aab8;
+}
+
+button.word {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 150px; /* Set a fixed width for all buttons */
+    height: 50px; /* Set a fixed height for all buttons */
+    font-size: 1.2em; /* Ensure text resizes properly */
+    padding: 5px; 
+    margin: 5px, 0;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    background-color: rgb(241, 188, 197);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box; /* Include border in size calculation */
+
+}
+
+button.word:hover {
+    background-color: #e0e0e0;
+}
+
+button.selected {
+    background-color: #e0e0e0;;
+}
+
+button.correct {
+    background-color: #cccccc;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+button.incorrect {
+    background-color: #f8d7da;
+}
+
+/* Apply new styles for the end game buttons */
+/* Ensure the container uses flexbox */
+#end-game-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Adds space between buttons */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Style buttons */
+/* Ensure the container uses flexbox */
+#end-game-buttons {
+    display: flex;
+    flex-direction: row; /* Arrange buttons horizontally */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Adds space between buttons */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Style buttons */
+.end-game-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #f7aab8;
+    color: #4e4e4e;
+    border: 1px solid #353535;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    gap:50px; 
+}
+
+/* Button hover effect */
+.end-game-button:hover {
+    background-color: #f1bcc5;
+}
+
+/* Remove focus outline */
+.end-game-button:focus {
+    outline: none;
+}
+
+/* Button hover effect */
+.end-game-button:hover {
+    background-color: #f1bcc5;
+}
+
+/* Remove focus outline */
+.end-game-button:focus {
+    outline: none;
+}
+
+
+.end-game-button:hover {
+    background-color: #f1bcc5;
+}
+
+.end-game-button:focus {
+    outline: none;
+}
+
+  
+
+
+/* Footer Styling */
+footer {
+    background-color: #4e4e4e;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+/* Responsive Design */
+
+/* For screens 375px and below */
+
+@media (max-width: 375px) {
+    @media (max-width: 480px) {
+
+        header {
+            font-size: 0.5em;
+        }
+    
+        nav {
+            font-size: 0.5em;
+        }
+        
+        section {
+            margin: 20px;
+        }
+        
+        .conversations {
+            padding: 5px;
+            border-radius: 5px; 
+       
+        }
+        
+        .conversations p {
+            margin: 0.5em 0.25em 0.5em 0.75em;
+            font-size: 1.2em;
+        }
+    
+        .listen {
+            width: 40%;
+            margin-bottom: 1em;
+        }
+       
+    
+    }
+ 
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+
+    header {
+        font-size: 0.7em;
+    }
+
+    nav {
+        font-size: 0.7em;
+    }
+    
+    section {
+        margin: 20px;
+    }
+    
+    .conversations {
+        padding: 40px 20px 20px 40px;
+        border-radius: 5px; 
+   
+    }
+    
+    .conversations p {
+        margin: 0.5em 0.25em 0.5em 0.75em;
+        font-size: 1.2em;
+    }
+
+    .listen {
+        width: 35%;
+        margin-bottom: 1em;
+    }
+   
+
+}
+
+/* For Screens 670px and below*/
+@media (max-width: 670px) {
+   
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+
+}
+
+/*For screens from 769px - 1023px */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+ 
+}
+
+/* For screens 1024px and above (Large screens like TVs) */
+@media (min-width: 1024px) {
+    .lessons {
+        margin-top: 30px;
+    }
+    
+    
+}
+
+
+/* For screens 1200px and above (Large screens like TVs) */
+@media (min-width: 1200px) {
+    .lessons {
+        margin-top: 50px;
+    }
+
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: rgb(53, 53, 53);
+    color: #f9f9f9;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    font-size: 0.9em;
+}

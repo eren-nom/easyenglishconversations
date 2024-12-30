@@ -9,7 +9,6 @@ html, body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
-    color: #353535;
     margin: 0;
     padding: 0;
 
@@ -18,7 +17,7 @@ html, body {
 /* Header Styling */
 header {
     background-color: #f1bcc5;
-    color: #353535;
+    color: #4e4e4e;
     text-align: center;
     padding: 1em 0;
 }
@@ -162,6 +161,38 @@ main {
 .back-to-main a:active {
     color: rgb(126, 31, 255); /* Change color when clicked */
 }
+
+.game-button {
+    text-align: center;
+    padding: 20px;
+}
+
+.peepy {
+    background-color: #d690d0; 
+    color: #353535;
+    border: 1px solid #050505;
+    padding: 10px 20px; 
+    font-size: 1.5em; 
+    border-radius: 5px; 
+    margin: 10px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    max-width: 100%;
+    align-self: center;  /* Align button to the right */
+    margin-top: 2em; 
+    }
+
+    /* Hover and Active States */
+    .peepy:hover {
+        background-color: #b183ad; 
+        transform: scale(1.05);
+    }
+
+    .peepy:active {
+        background-color: #d690d0;
+        transform: scale(0.98); /* Slightly shrinks the button on click */
+    }
 
 
 /* Responsive Design */
