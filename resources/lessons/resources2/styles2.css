@@ -168,7 +168,7 @@ main {
 }
 
 .peepy {
-    background-color: #d690d0; 
+    background-color: rgb(204, 204, 204); 
     color: #353535;
     border: 1px solid #050505;
     padding: 10px 20px; 
@@ -185,12 +185,12 @@ main {
 
     /* Hover and Active States */
     .peepy:hover {
-        background-color: #b183ad; 
+        background-color: rgb(173, 173, 173); 
         transform: scale(1.05);
     }
 
     .peepy:active {
-        background-color: #d690d0;
+        background-color: rgb(204, 204, 204);
         transform: scale(0.98); /* Slightly shrinks the button on click */
     }
 

@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*border: 1px solid red*/
 }
 
 html, body {
@@ -12,6 +11,7 @@ html, body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+
 }
 
 /* Header Styling */
@@ -23,8 +23,9 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 4em;
     margin-bottom: 0.2em;
+    padding-top: 0.5em;
 }
 
 /* Navigation Bar */
@@ -43,29 +44,29 @@ nav h2 {
     transition: color 0.3s ease;
 }
 
+/* Main Section */
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
 /* Game Section Layout */
 .game {
     display: flex;
     justify-content: center;
     margin-top: 2em;
     margin-bottom: 2em;
+    flex: 1 1 auto;
 }
 
 .english-words, .japanese-words {
     display: flex;
     flex-direction: column;
-    width: 35%; /* Reduce the width of columns to allow for proper spacing */
+    width: 25%; 
     justify-content: center;
     align-items: center;
-
 }
 
-.english-words h2, .japanese-words h2 {
-    color: #4e4e4e;
-    text-align: center;
-    padding: 10px;
-
-}
 
 button {
     padding: 10px 20px;
@@ -74,9 +75,12 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 10px;
     font-size: 1.5em;
     width: 30%;
+    white-space: normal; /* Allows text to wrap */
+    overflow-wrap: break-word; /* Ensures long words break if needed */
+    text-align: center; /* Center align text */
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -87,18 +91,17 @@ button.word {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    width: 150px; /* Set a fixed width for all buttons */
-    height: 50px; /* Set a fixed height for all buttons */
-    font-size: 1.2em; /* Ensure text resizes properly */
-    padding: 5px; 
-    margin: 5px, 0;
+    width: 200px; /* Fixed width */
+    height: 60px; /* Fixed height */
+    font-size: 1.4em; 
+    padding: 10px; 
+    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px; 
     background-color: rgb(241, 188, 197);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-sizing: border-box; /* Include border in size calculation */
-
+    box-sizing: border-box; 
 }
 
 button.word:hover {
@@ -106,7 +109,7 @@ button.word:hover {
 }
 
 button.selected {
-    background-color: #e0e0e0;;
+    background-color: #e0e0e0;
 }
 
 button.correct {
@@ -119,30 +122,18 @@ button.incorrect {
     background-color: #f8d7da;
 }
 
+
 /* Apply new styles for the end game buttons */
-/* Ensure the container uses flexbox */
-#end-game-buttons {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    justify-content: center;
-    align-items: center;
-    gap: 50px; /* Adds space between buttons */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1000;
-}
+
 
 /* Style buttons */
-/* Ensure the container uses flexbox */
+
 #end-game-buttons {
     display: flex;
-    flex-direction: row; /* Arrange buttons horizontally */
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Adds space between buttons */
+    gap: 50px; 
     position: fixed;
     top: 50%;
     left: 50%;
@@ -153,16 +144,18 @@ button.incorrect {
 
 /* Style buttons */
 .end-game-button {
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 15px 30px 40px;
+    font-size: 1.3em;
     background-color: #f7aab8;
     color: #4e4e4e;
     border: 1px solid #353535;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    gap:50px; 
+    width: 300px;
+    height: auto;
 }
+
 
 /* Button hover effect */
 .end-game-button:hover {
@@ -193,8 +186,36 @@ button.incorrect {
     outline: none;
 }
 
-  
 
+
+/* Style for the link */
+.back-to-conversation, .back-to-main {
+    text-align: center;
+}
+
+.back-to-conversation a, .back-to-main a  {
+    text-decoration: none; /* Remove underline */
+    color: #353535; /* Link color */
+    font-size: clamp(0.5rem, 2.5vw, 1em); /* Responsive link font size */
+    font-weight: bold; /* Make the link bold */
+    transition: color 0.3s ease; /* Smooth color transition */
+    line-height: 3.5em;
+}
+
+.back-to-main a {
+    color: gray;
+    font-size: 1.2em;
+}
+
+/* Hover effect for the link */
+.back-to-conversation a:hover,.back-to-main a:hover {
+    color: rgb(126, 31, 255); /* Change color on hover */
+}
+
+/* Active state for the link */
+.back-to-conversation a:active, back-to-main a:active  {
+    color: rgb(126, 31, 255); /* Change color when clicked */
+}
 
 /* Footer Styling */
 footer {
@@ -202,127 +223,86 @@ footer {
     color: #f9f9f9;
     text-align: center;
     padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    font-size: clamp(0.8rem, 2.5vw, 1em); /* Responsive footer font size */
 }
 
 
 /* Responsive Design */
 
-/* For screens 375px and below */
+/* For screen 350px and below */
 
-@media (max-width: 375px) {
-    @media (max-width: 480px) {
+    @media (max-width: 350px) {
+        .game, #end-game-buttons  {
+            flex-direction: column; /* Stack the sections vertically */
+        }
+    
+        .english-words, .japanese-words {
+            width: 100%; /* Make the sections take full width */
+            margin-bottom: 10px; /* Add some spacing between the sections */
+        }
 
-        header {
-            font-size: 0.5em;
-        }
-    
-        nav {
-            font-size: 0.5em;
-        }
-        
-        section {
-            margin: 20px;
-        }
-        
-        .conversations {
-            padding: 5px;
-            border-radius: 5px; 
-       
-        }
-        
-        .conversations p {
-            margin: 0.5em 0.25em 0.5em 0.75em;
-            font-size: 1.2em;
-        }
-    
-        .listen {
-            width: 40%;
-            margin-bottom: 1em;
-        }
-       
-    
+
     }
- 
+
+/* For screens 375px and below */
+@media (max-width: 375px) {
+    .game {
+        width: 100%;
+        margin: 15px auto;
+        justify-content: space-between; /* Maintain equal space between columns */
+    }
+
+    button.word {
+        box-sizing: border-box;
+        height: 50px; /* Fixed height */
+        font-size: 0.5em;
+    }
 }
 
 /* For screens 480px and below */
 @media (max-width: 480px) {
-
-    header {
-        font-size: 0.7em;
+    .game {
+        width: 70%;
+        margin: 15px auto;
+        justify-content: space-between; /* Maintain equal space between columns */
     }
 
-    nav {
-        font-size: 0.7em;
+    button.word {
+        width: 130px; /* Fixed width */
+        height: 60px; /* Fixed height */
+        font-size: 1em;
+        padding: 8px;
+        overflow-wrap: break-word;
     }
-    
-    section {
-        margin: 20px;
-    }
-    
-    .conversations {
-        padding: 40px 20px 20px 40px;
-        border-radius: 5px; 
-   
-    }
-    
-    .conversations p {
-        margin: 0.5em 0.25em 0.5em 0.75em;
-        font-size: 1.2em;
-    }
-
-    .listen {
-        width: 35%;
-        margin-bottom: 1em;
-    }
-   
-
 }
 
-/* For Screens 670px and below*/
+/* For screens 670px and below */
 @media (max-width: 670px) {
-   
-}
-
-/* For screens 768px and below */
-@media (max-width: 768px) {
-
-}
-
-/*For screens from 769px - 1023px */
-
-@media (min-width: 769px) and (max-width: 1023px) {
- 
-}
-
-/* For screens 1024px and above (Large screens like TVs) */
-@media (min-width: 1024px) {
-    .lessons {
-        margin-top: 30px;
+    .game {
+        width: 70%;
+        margin: 15px auto;
+        justify-content: space-between; /* Maintain equal space between columns */
     }
-    
-    
 }
 
-
-/* For screens 1200px and above (Large screens like TVs) */
-@media (min-width: 1200px) {
-    .lessons {
-        margin-top: 50px;
+    button.word {
+        width: 140px; /* Fixed width */
+        height: 60px; /* Fixed height */
+        font-size: 1em;
+        padding: 10px;
     }
 
-}
+    #end-buttons {
+        flex-direction: column; 
+        gap: 10px; 
+    }
 
-
-/* Footer Styling */
-footer {
-    background-color: rgb(53, 53, 53);
-    color: #f9f9f9;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 2em;
-}
-
-footer p {
-    font-size: 0.9em;
-}
+    .end-game-button {
+        font-size: 1em;
+        width: 120px;
+        height: 60px;
+    }
