@@ -127,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getCorrectTranslation(japaneseWord) {
     const vocabulary = {
-
       'おはよう': 'Good morning',
       '元気ですか？': 'How are you?',
       '元気です': `I'm fine`,
@@ -202,11 +201,9 @@ document.addEventListener('DOMContentLoaded', () => {
     englishWords.forEach(h2 => h2.style.color = '#f9f9f9');
     japaneseWords.forEach(h2 => h2.style.color = '#f9f9f9');
 
-    
     const endGameContainer = document.createElement('div');
     endGameContainer.id = 'end-game-buttons'; // No need to set styles here
-    
- 
+
     const playAgainButton = document.createElement('button');
     playAgainButton.textContent = 'Play Again';
     playAgainButton.classList.add('end-game-button');
