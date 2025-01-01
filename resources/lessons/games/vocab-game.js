@@ -197,10 +197,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showEndGameButtons() {
 
-    const tryAgainButton = document.getElementById('try-again-button');
-    if (tryAgainButton) {
-      tryAgainButton.remove();
-    }
+  const tryAgainButton = document.getElementById('try-again-button');
+  if (tryAgainButton) {
+    tryAgainButton.remove();
+  }
 
     const englishWords = document.querySelectorAll('.english-words h2');
     const japaneseWords = document.querySelectorAll('.japanese-words h2');
@@ -241,6 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
       button.disabled = false;
     });
 
+    
+
     shuffleButtons();
   }
 
@@ -258,16 +260,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Support for touch devices
-  document.querySelector('.english-words').addEventListener('touchstart', event => {
-    if (event.target.classList.contains('word')) {
-      handleButtonClick(event.target, 'english');
-    }
-  });
 
-  document.querySelector('.japanese-words').addEventListener('touchstart', event => {
-    if (event.target.classList.contains('word')) {
-      handleButtonClick(event.target, 'japanese');
-    }
-  });
 });
