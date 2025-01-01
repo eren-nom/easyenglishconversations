@@ -83,7 +83,7 @@ main {
 
 
 .listen {
-    background-color: #F1BCC5; 
+    background-color: #f3d2d8; 
     color: #353535;
     border: 1px solid #050505;
     padding: 10px 20px; 
@@ -100,12 +100,12 @@ main {
 
 /* Hover and Active States */
 .listen:hover {
-    background-color: #e2919f; 
+    background-color:  rgb(241, 188, 197); 
     transform: scale(1.05);
 }
 
 .listen:active {
-    background-color: #f199a8;
+    background-color: rgb(241, 188, 197);
     transform: scale(0.98); /* Slightly shrinks the button on click */
 }
 
@@ -167,8 +167,8 @@ main {
     padding: 20px;
 }
 
-.peepy {
-    background-color: rgb(204, 204, 204); 
+.game-button-text {
+    background-color: #f3d2d8; 
     color: #353535;
     border: 1px solid #050505;
     padding: 10px 20px; 
@@ -184,13 +184,13 @@ main {
     }
 
     /* Hover and Active States */
-    .peepy:hover {
-        background-color: rgb(173, 173, 173); 
+    .game-button-text:hover {
+        background-color: rgb(241, 188, 197); 
         transform: scale(1.05);
     }
 
-    .peepy:active {
-        background-color: rgb(204, 204, 204);
+    .game-button-text:active {
+        background-color: rgb(241, 188, 197);
         transform: scale(0.98); /* Slightly shrinks the button on click */
     }
 

@@ -177,8 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tryAgainButton.addEventListener('mouseover', () => {
       tryAgainButton.style.transform = 'translate(-50%, -50%) scale(1.05)';
-      tryAgainButton.style.backgroundColor = 'rgb(248, 217, 222)';
+      tryAgainButton.style.backgroundColor = 'rgb(248, 187, 198)';
       tryAgainButton.style.boxShadow = '0px 15px 25px rgba(0, 0, 0, 0.3)';
+
     });
 
     tryAgainButton.addEventListener('mouseout', () => {
@@ -202,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     japaneseWords.forEach(h2 => h2.style.color = '#f9f9f9');
 
     const endGameContainer = document.createElement('div');
-    endGameContainer.id = 'end-game-buttons'; // No need to set styles here
+    endGameContainer.id = 'end-game-buttons'; 
 
     const playAgainButton = document.createElement('button');
     playAgainButton.textContent = 'Play Again';
@@ -246,6 +247,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelector('.japanese-words').addEventListener('click', event => {
+    if (event.target.classList.contains('word')) {
+      handleButtonClick(event.target, 'japanese');
+    }
+  });
+
+  // Support for touch devices
+  document.querySelector('.english-words').addEventListener('touchstart', event => {
+    if (event.target.classList.contains('word')) {
+      handleButtonClick(event.target, 'english');
+    }
+  });
+
+  document.querySelector('.japanese-words').addEventListener('touchstart', event => {
     if (event.target.classList.contains('word')) {
       handleButtonClick(event.target, 'japanese');
     }
