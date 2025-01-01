@@ -182,17 +182,14 @@ main {
     max-width: 100%;
     align-self: center;  /* Align button to the right */
     margin-top: 2em; 
+    -webkit-tap-highlight-color: transparent; /* Disable tap highlight on iOS and Android */
     }
+    
 
     /* Hover and Active States */
     .game-button-text:hover {
         background-color: #f7aab8; 
         transform: scale(1.05);
-    }
-
-    .game-button-text:active {
-        background-color: rgb(241, 188, 197);
-        transform: scale(0.98); /* Slightly shrinks the button on click */
     }
 
 
