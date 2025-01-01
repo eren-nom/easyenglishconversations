@@ -28,8 +28,8 @@ header h1 {
     padding-top: 0.5em;
 }
 
-/* Navigation Bar */
-nav {
+/* Subheader */
+.subheader {
     display: flex;          
     background-color: #4e4e4e;
     padding: 0.5em 0;
@@ -37,7 +37,7 @@ nav {
 }
 
 
-nav h2 {
+.subheader h2 {
     text-decoration: none;
     color: #f9f9f9;
     font-size: 2em;
@@ -263,12 +263,27 @@ main {
 /* Footer Styling */
 footer {
     background-color: #4e4e4e;;
-    color: #f9f9f9;
+    color: #d6d3d3;
     text-align: center;
     padding: 1em 0;
     margin-top: 2em;
+    line-height: 2.5em;
+    font-size: 1em;
 }
 
 footer p {
     font-size: 0.9em;
 }
+
+
+footer a {
+    text-decoration: underline; 
+    color: #d6d3d3; 
+}
+
+footer a:hover {
+    color: rgb(149, 148, 150); 
+}
+
+
+
