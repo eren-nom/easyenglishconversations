@@ -100,7 +100,7 @@ main {
 
 /* Hover and Active States */
 .listen:hover {
-    background-color:  rgb(241, 188, 197); 
+    background-color:  #f7aab8; 
     transform: scale(1.05);
 }
 
@@ -155,6 +155,7 @@ main {
 /* Hover effect for the link */
 .back-to-main a:hover {
     color: rgb(126, 31, 255); /* Change color on hover */
+    text-decoration: underline;
 }
 
 /* Active state for the link */
@@ -185,7 +186,7 @@ main {
 
     /* Hover and Active States */
     .game-button-text:hover {
-        background-color: rgb(241, 188, 197); 
+        background-color: #f7aab8; 
         transform: scale(1.05);
     }
 

@@ -74,16 +74,20 @@ button {
     padding: 10px 20px;
     background-color: rgb(241, 188, 197);
     color: #4e4e4e;
-    border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 1.5em;
     width: 30%;
-    white-space: normal; /* Allows text to wrap */
-    overflow-wrap: break-word; /* Ensures long words break if needed */
-    text-align: center; /* Center align text */
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    text-align: center; 
     box-sizing: border-box;
+    border: 1px solid #353535; 
+
+    
+    border-radius: 10px; 
 }
+
 
 button:hover {
     background-color: #f7aab8;
@@ -96,10 +100,8 @@ button.word {
     width: 200px; /* Fixed width */
     height: 60px; /* Fixed height */
     font-size: 1.4em; 
-    padding: 10px; 
+    padding: 50px; 
     margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 10x; 
     background-color: #f3d2d8;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -148,7 +150,7 @@ button.incorrect {
 .end-game-button {
     padding: 15px 30px 50px;
     font-size: 1.3em;
-    background-color: #f7aab8;
+    background-color: #f3d2d8;
     color: #4e4e4e;
     border: 1px solid #353535;
     border-radius: 8px;
@@ -171,7 +173,7 @@ button.incorrect {
 
 /* Button hover effect */
 .end-game-button:hover {
-    background-color: #f1bcc5;
+    background-color: #f7aab8;
 }
 
 /* Remove focus outline */
@@ -181,7 +183,7 @@ button.incorrect {
 
 
 .end-game-button:hover {
-    background-color: #f1bcc5;
+    background-color: #f7aab8;
 }
 
 .end-game-button:focus {

@@ -165,19 +165,19 @@ document.addEventListener('DOMContentLoaded', () => {
       padding: 10px 30px 20px;
       background-color: #e0e0e0;
       color: #721c24;
-      border: 0.5px solid #353535;
+      border: 1px double #353535;
       border-radius: 10px;
       cursor: pointer;
       z-index: 1000;
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
       line-height: 2em;
-      width: 200px;
+      width: 210px;
       height: auto;
     `;
 
     tryAgainButton.addEventListener('mouseover', () => {
       tryAgainButton.style.transform = 'translate(-50%, -50%) scale(1.05)';
-      tryAgainButton.style.backgroundColor = 'rgb(248, 187, 198)';
+      tryAgainButton.style.backgroundColor = '#e0e0e0';
       tryAgainButton.style.boxShadow = '0px 15px 25px rgba(0, 0, 0, 0.3)';
 
     });
@@ -196,6 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showEndGameButtons() {
+
+    const tryAgainButton = document.getElementById('try-again-button');
+    if (tryAgainButton) {
+      tryAgainButton.remove();
+    }
+
     const englishWords = document.querySelectorAll('.english-words h2');
     const japaneseWords = document.querySelectorAll('.japanese-words h2');
 
