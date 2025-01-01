@@ -145,22 +145,22 @@ main {
 
 /* Style for the link */
 .back-to-main a {
-    text-decoration: none; /* Remove underline */
-    color: #353535; /* Link color */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Make the link bold */
-    transition: color 0.3s ease; /* Smooth color transition */
+    text-decoration: none; 
+    color: #353535; 
+    font-size: 16px; 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
 }
 
 /* Hover effect for the link */
 .back-to-main a:hover {
-    color: rgb(126, 31, 255); /* Change color on hover */
+    color: rgb(126, 31, 255); 
     text-decoration: underline;
 }
 
 /* Active state for the link */
 .back-to-main a:active {
-    color: rgb(126, 31, 255); /* Change color when clicked */
+    color: rgb(126, 31, 255); 
 }
 
 .game-button {
@@ -177,12 +177,13 @@ main {
     border-radius: 5px; 
     margin: 10px;
     cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     max-width: 100%;
-    align-self: center;  /* Align button to the right */
+    align-self: center; 
     margin-top: 2em; 
-    -webkit-tap-highlight-color: transparent; /* Disable tap highlight on iOS and Android */
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
     }
     
 
@@ -190,6 +191,10 @@ main {
     .game-button-text:hover {
         background-color: #f7aab8; 
         transform: scale(1.05);
+    }
+
+    .game-button-text:focus {
+        outline: none; 
     }
 
 
