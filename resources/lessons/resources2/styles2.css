@@ -91,8 +91,8 @@ main {
     border-radius: 5px; 
     margin: 10px;
     cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     max-width: 100%;
     align-self: center;  
     margin-top: 2em; 
@@ -186,6 +186,7 @@ main {
     margin-top: 2em; 
     -webkit-tap-highlight-color: transparent;
     outline: none !important;
+
     }
     
 
@@ -200,9 +201,6 @@ main {
         transform: scale(0.98); 
     }
 
-    .game-button-text:focus {
-        outline: none; 
-    }
 
 
 /* Responsive Design */
