@@ -166,6 +166,8 @@ main {
 .game-button {
     text-align: center;
     padding: 20px;
+    -webkit-tap-highlight-color: transparent;
+    outline: none !important;
 }
 
 .game-button-text {
@@ -183,7 +185,7 @@ main {
     align-self: center; 
     margin-top: 2em; 
     -webkit-tap-highlight-color: transparent;
-    outline: none;
+    outline: none !important;
     }
     
 

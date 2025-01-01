@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'さようなら': 'Goodbye',
       'やった！・よかった！': 'Oh good!',
       'よくできたね！': 'Good job!',
-      'いいね！・よかったね！！': `That's good!`,
+      'いいね！・よかったね！': `That's good!`,
     };
 
     return vocabulary[japaneseWord] || '';
