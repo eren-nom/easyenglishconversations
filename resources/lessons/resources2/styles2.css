@@ -94,7 +94,7 @@ main {
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
     max-width: 100%;
-    align-self: center;  /* Align button to the right */
+    align-self: center;  
     margin-top: 2em; 
 }
 
@@ -106,13 +106,13 @@ main {
 
 .listen:active {
     background-color: rgb(241, 188, 197);
-    transform: scale(0.98); /* Slightly shrinks the button on click */
+    transform: scale(0.98); 
 }
 
 .back-to-main {
     font-size: 1.1em;
-    text-align: center; /* Center the text */
-    margin-top: 30px; /* Add some space from the content above */
+    text-align: center; 
+    margin-top: 30px; 
 }
 
 #translation {
@@ -193,6 +193,11 @@ main {
     .game-button-text:hover {
         background-color: #f7aab8; 
         transform: scale(1.05);
+    }
+
+    .game-button-text:active {
+        background-color: rgb(241, 188, 197);
+        transform: scale(0.98); 
     }
 
     .game-button-text:focus {
