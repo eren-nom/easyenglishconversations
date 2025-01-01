@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { japanese: 'さようなら', english: 'Goodbye' },
       { japanese: 'やった！・よかった！', english: 'Oh good!' },
       { japanese: 'よくできたね！', english: 'Good job!' },
-      { japanese: 'いいね！・よかったね', english: `That's good!` },
+      { japanese: 'いいね！・よかったね！', english: `That's good!` },
     ];
 
     // Randomly shuffle vocabulary and pick 5 items
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'さようなら': 'Goodbye',
       'やった！・よかった！': 'Oh good!',
       'よくできたね！': 'Good job!',
-      'いいね！・よかったね': `That's good!`,
+      'いいね！・よかったね！！': `That's good!`,
     };
 
     return vocabulary[japaneseWord] || '';
