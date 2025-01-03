@@ -190,12 +190,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tryAgainButton.addEventListener('click', () => {
       tryAgainButton.remove();
+      resetButtons(); // Reset buttons after the Try Again button is removed
     });
+
 
     setTimeout(() => {
       tryAgainButton.remove();
-    }, 1000);
-    
+      resetButtons(); // Reset buttons after the Try Again button disappears automatically after 1 second
+  }, 1500);
+
 
     document.body.appendChild(tryAgainButton);
   }
