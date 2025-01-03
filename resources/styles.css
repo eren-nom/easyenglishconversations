@@ -111,6 +111,12 @@ main {
     transform: scale(1.1);
 }
 
+.square:active {
+    background-color:  #f7aab8;
+    transform: scale(0.98); 
+}
+
+
 .game-button-text:active {
     background-color: rgb(241, 188, 197);
     transform: scale(0.98); 

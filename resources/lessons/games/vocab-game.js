@@ -192,6 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
       tryAgainButton.remove();
     });
 
+    setTimeout(() => {
+      tryAgainButton.remove();
+    }, 1000);
+    
+
     document.body.appendChild(tryAgainButton);
   }
 
