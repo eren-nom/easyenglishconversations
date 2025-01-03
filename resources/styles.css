@@ -116,6 +116,11 @@ main {
     transform: scale(0.98); 
 }
 
+.game-button-text:hover {
+    background-color: rgb(241, 188, 197);
+    transform: scale(0.98); 
+}
+
 
 .game-button-text:active {
     background-color: rgb(241, 188, 197);
