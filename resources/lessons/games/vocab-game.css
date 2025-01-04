@@ -1,16 +1,16 @@
 /* General Reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
       
 }
 
 html, body {
+    background-color: #f9f9f9;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 
@@ -20,11 +20,11 @@ html, body {
 header {
     background-color: #f1bcc5;
     color: #4e4e4e;
-    text-align: center;
     padding: 1em 0;
+    text-align: center;
 }
 
-header h1 {
+h1 {
     font-size: 4em;
     margin-bottom: 0.2em;
     padding-top: 0.5em;
@@ -32,89 +32,111 @@ header h1 {
 
 /* Subheader */
 .subheader {
-    display: flex;          
     background-color: #4e4e4e;
+    display: flex;  
+    justify-content: center;    
     padding: 0.5em 0;
-    justify-content: center; 
+
 }
 
 
-.subheader h2 {
-    text-decoration: none;
+h2 {
     color: #f9f9f9;
     font-size: 2em;
-    transition: color 0.3s ease;
     text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease;
+ 
 }
 
 /* Main Section */
 main {
-    width: 70%;
     margin: 0 auto;
+    width: 70%;
+
 }
+
 
 /* Game Section Layout */
 .game {
     display: flex;
-    justify-content: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
     flex: 1 1 auto;
+    justify-content: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
+.rounds {
+    display: flex;
+    justify-content: center;  
+    align-items: center;   
+    margin-top: 50px;              
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  h3 {
+    margin: 0; /* Remove any default margin */
+    text-align: center; /* Ensures the text is centered if it's a block element */
+    color: #353535;
+  }
+  
 
 .english-words, .japanese-words {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    width: 25%; 
     justify-content: center;
-    align-items: center;
-    margin: 30px 0;
+    margin: 10px 0;
+    width: 25%; 
 }
+
 
 
 button {
-    padding: 10px 20px;
     background-color: rgb(241, 188, 197);
-    color: #4e4e4e;
+    border: 1px solid #353535; 
     border-radius: 10px;
+    box-sizing: border-box;
+    color: #4e4e4e;
     cursor: pointer;
     font-size: 1.5em;
-    width: 30%;
-    white-space: normal; 
     overflow-wrap: break-word; 
+    padding: 10px 20px;
     text-align: center; 
-    box-sizing: border-box;
-    border: 1px solid #353535; 
-
-    
-    border-radius: 10px; 
+    white-space: normal; 
+    width: 30%;
 }
 
 
-button:hover {
+button:hover, .end-game-button:hover {
     background-color: #f7aab8;
+    outline: none;
+}
+
+button:focus, .end-game-button:focus {
+    background-color: #f7aab8;
+    outline: none; 
 }
 
 button.word {
-    display: flex; 
-    justify-content: center; 
     align-items: center; 
-    width: 200px; /* Fixed width */
-    height: 60px; /* Fixed height */
-    font-size: 1.4em; 
-    padding: 50px; 
-    margin: 5px 0;
     background-color: #f3d2d8;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
     box-sizing: border-box; 
+    cursor: pointer;
+    display: flex; 
+    font-size: 1.4em; 
+    justify-content: center; 
+    height: 60px; 
+    margin: 5px 0;
+    padding: 60px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px; 
 }
 
 button.word:hover {
     background-color: #f7aab8;
 }
-
 
 
 button.selected {
@@ -123,8 +145,14 @@ button.selected {
 
 button.correct {
     background-color: #cccccc;
-    opacity: 0;
+    color: black;
+    opacity: 0.3;
     transition: opacity 0.1s ease-in-out;
+}
+
+button.correct:hover {
+    background-color: #cccccc;
+    opacity: 0.3;
 }
 
 button.incorrect {
@@ -138,63 +166,32 @@ button.incorrect {
 /* Style buttons */
 
 #end-game-buttons {
+    align-items: center;
     display: flex;
     flex-direction: row; 
-    justify-content: center;
-    align-items: center;
     gap: 50px; 
+    justify-content: center;
+    left: 50%;
     position: fixed;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    transform: translate(-50%, -50%);
     z-index: 1000;
 }
 
 /* Style buttons */
 .end-game-button {
-    padding: 15px 30px 50px;
-    font-size: 1.3em;
     background-color: #f3d2d8;
-    color: #4e4e4e;
     border: 1px solid #353535;
     border-radius: 8px;
+    color: #4e4e4e;
     cursor: pointer;
+    font-size: 1.3em;
+    height: auto;
+    padding: 15px 30px 50px;
     transition: background-color 0.3s ease;
     width: 300px;
-    height: auto;
 }
-
-
-/* Button hover effect */
-.end-game-button:hover {
-    background-color: #f1bcc5;
-}
-
-/* Remove focus outline */
-.end-game-button:focus {
-    outline: none;
-}
-
-/* Button hover effect */
-.end-game-button:hover {
-    background-color: #f7aab8;
-}
-
-/* Remove focus outline */
-.end-game-button:focus {
-    outline: none;
-}
-
-
-.end-game-button:hover {
-    background-color: #f7aab8;
-}
-
-.end-game-button:focus {
-    outline: none;
-}
-
 
 
 /* Style for the link */
@@ -203,12 +200,13 @@ button.incorrect {
 }
 
 .back-to-conversation a, .back-to-main a  {
-    text-decoration: none; /* Remove underline */
-    color: #353535; /* Link color */
-    font-size: clamp(0.9rem, 2.5vw, 1em); /* Responsive link font size */
-    font-weight: bold; /* Make the link bold */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: #353535; 
+    font-size: clamp(0.9rem, 2.5vw, 1em); 
+    font-weight: bold; 
     line-height: 3.5em;
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+
 }
 
 .back-to-main a {
@@ -230,9 +228,9 @@ button.incorrect {
 footer {
     background-color: #4e4e4e;
     color: #f9f9f9;
-    text-align: center;
-    padding: 1em 0;
     margin-top: 2em;
+    padding: 1em 0;
+    text-align: center;
 }
 
 footer p {
@@ -244,14 +242,15 @@ footer p {
 
 /* For screen 350px and below */
 
-    @media (max-width: 350px) {
-        .game, #end-game-buttons  {
-            flex-direction: column; /* Stack the sections vertically */
-        }
-    
-        .english-words, .japanese-words {
-            width: 100%; /* Make the sections take full width */
-            margin-bottom: 10px; /* Add some spacing between the sections */
+@media (max-width: 350px) {
+    .game, #end-game-buttons  {
+        flex-direction: column; 
+    }
+
+    .english-words, .japanese-words {
+        margin-bottom: 10px; 
+        width: 100%; 
+
         }
 
 
@@ -261,50 +260,56 @@ footer p {
 @media (max-width: 375px) {
 
     .game.section {
+        justify-content: space-between; 
         margin: 15px auto;
-        justify-content: space-between; /* Maintain equal space between columns */
         width: 90%;
     }
 
     button.word {
         box-sizing: border-box;
-        height: 50px; /* Fixed height */
         font-size: 0.5em;
+        height: 50px; 
     }
 }
 
 /* For screens 480px and below */
 @media (max-width: 480px) {
     .game {
-        width: 70%;
+        justify-content: space-between; 
         margin: 15px auto;
-        justify-content: space-between; /* Maintain equal space between columns */
-        
+        width: 70%;
     }
 
-    button.word {
-        width: 130px; /* Fixed width */
-        height: 60px; /* Fixed height */
+    button.word {  
         font-size: 1em;
-        padding: 8px;
+        height: 60px; 
         overflow-wrap: break-word;
+        padding: 8px;
+        width: 130px; 
     }
 }
 
 /* For screens 670px and below */
 @media (max-width: 670px) {
     .game {
-        width: 70%;
+
         margin: 15px auto;
-        justify-content: space-between; /* Maintain equal space between columns */
+        justify-content: space-between; 
+        width: 70%;
     }
 }
 
-    button.word {
-        width: 140px; /* Fixed width */
-        height: 60px; /* Fixed height */
+    .rounds { 
+        margin-top: 20px;              
         font-size: 1em;
+    }
+
+
+    button.word {
+        font-size: 1em;
+        height: 60px; /* Fixed height */
         padding: 10px;
+        width: 140px; /* Fixed width */
     }
 
     #end-buttons {
@@ -314,19 +319,19 @@ footer p {
 
     .end-game-button {
         font-size: 1em;
-        width: 120px;
         height: 60px;
+        width: 120px;
     }
 
     /* Footer Styling */
 footer {
     background-color: #4e4e4e;;
     color: #d6d3d3;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 2em;
-    line-height: 2.5em;
     font-size: 1em;
+    line-height: 2.5em;
+    margin-top: 2em;
+    padding: 1em 0;
+    text-align: center;
 }
 
 footer p {
@@ -335,8 +340,8 @@ footer p {
 
 
 footer a {
-    text-decoration: underline; 
     color: #d6d3d3; 
+    text-decoration: underline; 
 }
 
 footer a:hover {

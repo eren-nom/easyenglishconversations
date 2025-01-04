@@ -4,34 +4,47 @@ document.addEventListener('DOMContentLoaded', () => {
   let selectedEnglishButton = null;
   let selectedJapaneseButton = null;
   let correctMatches = 0;
+  let round = 1;
+
+  const vocabulary = [
+    { japanese: 'おはよう', english: 'Good morning' },
+    { japanese: '元気ですか？', english: 'How are you?' },
+    { japanese: '元気です', english: `I'm fine` },
+    { japanese: 'まあまあ・悪くない', english: 'not bad' },
+    { japanese: '宿題', english: 'homework' },
+    { japanese: 'しましたか？', english: 'Did you do it?' },
+    { japanese: 'どうぞ', english: 'Here you are!' },
+    { japanese: 'はい', english: 'yes' },
+    { japanese: 'ありがとう', english: 'Thanks' },
+    { japanese: 'あなたはどうですか？', english: 'How about you?' },
+    { japanese: '朝', english: 'morning' },
+    { japanese: '午後', english: 'afternoon' },
+    { japanese: '夕方', english: 'evening' },
+    { japanese: 'おやすみなさい', english: 'Goodnight' },
+    { japanese: 'さようなら', english: 'Goodbye' },
+    { japanese: 'やった！・よかった！', english: 'Oh good!' },
+    { japanese: 'よくできたね！', english: 'Good job!' },
+    { japanese: 'いいね！・よかったね！', english: `That's good!` },
+    { japanese: '明日', english: 'tomorrow' },
+    { japanese: '今日', english: 'today' },
+  ];
+
+  let usedVocabulary = [];
 
   function shuffleButtons() {
     const englishContainer = document.querySelector('.english-words');
     const japaneseContainer = document.querySelector('.japanese-words');
 
-    const vocabulary = [
-      { japanese: 'おはよう', english: 'Good morning' },
-      { japanese: '元気ですか？', english: 'How are you?' },
-      { japanese: '元気です', english: `I'm fine` },
-      { japanese: 'まあまあ・悪くない', english: 'not bad' },
-      { japanese: '宿題', english: 'homework' },
-      { japanese: 'しましたか？', english: 'Did you do it?' },
-      { japanese: 'どうぞ', english: 'Here you are!' },
-      { japanese: 'はい', english: 'yes' },
-      { japanese: 'ありがとう', english: 'Thanks' },
-      { japanese: 'あなたはどうですか？', english: 'How about you?' },
-      { japanese: '朝', english: 'morning' },
-      { japanese: '午後', english: 'afternoon' },
-      { japanese: '夕方', english: 'evening' },
-      { japanese: 'おやすみなさい', english: 'Goodnight' },
-      { japanese: 'さようなら', english: 'Goodbye' },
-      { japanese: 'やった！・よかった！', english: 'Oh good!' },
-      { japanese: 'よくできたね！', english: 'Good job!' },
-      { japanese: 'いいね！・よかったね！', english: `That's good!` },
-    ];
+    // Select the next 5 unused vocabulary items for the round
+    let remainingVocabulary = vocabulary.filter(item => !usedVocabulary.includes(item));
+    if (remainingVocabulary.length === 0) {
+      // All items used, restart the game
+      usedVocabulary = [];
+      remainingVocabulary = [...vocabulary]; // Copy the full vocabulary
+    }
 
-    // Randomly shuffle vocabulary and pick 5 items
-    const selectedVocabulary = vocabulary.sort(() => Math.random() - 0.5).slice(0, 5);
+    const selectedVocabulary = remainingVocabulary.sort(() => Math.random() - 0.5).slice(0, 5);
+    usedVocabulary = usedVocabulary.concat(selectedVocabulary);
 
     // Clear previous contents in containers
     englishContainer.innerHTML = '';
@@ -58,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
       button.textContent = word;
       japaneseContainer.appendChild(button);
     });
+
+    // Update round title
+    document.getElementById('round-selection').textContent = `Round ${round}`;
   }
 
   function handleButtonClick(button, type) {
@@ -107,7 +123,13 @@ document.addEventListener('DOMContentLoaded', () => {
         correctMatches++;
 
         if (correctMatches === 5) {
-          showEndGameButtons();
+          if (round < 4) {
+            round++;
+            shuffleButtons();
+            correctMatches = 0;
+          } else {
+            showEndGameButtons();
+          }
         }
       } else {
         selectedEnglishButton.classList.add('incorrect');
@@ -145,6 +167,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'やった！・よかった！': 'Oh good!',
       'よくできたね！': 'Good job!',
       'いいね！・よかったね！': `That's good!`,
+      '明日': 'tomorrow',
+      '今日': 'today',
     };
 
     return vocabulary[japaneseWord] || '';
@@ -190,13 +214,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tryAgainButton.addEventListener('click', () => {
       tryAgainButton.remove();
-      resetButtons(); // Reset buttons after the Try Again button is removed
+      resetButtons(); 
     });
 
 
     setTimeout(() => {
       tryAgainButton.remove();
-      resetButtons(); // Reset buttons after the Try Again button disappears automatically after 1 second
+      resetButtons(); 
   }, 1500);
 
 
@@ -236,19 +260,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function resetGame() {
-    const endGameButtons = document.getElementById('end-game-buttons');
-    if (endGameButtons) {
-      endGameButtons.remove();
-    }
-
-    correctMatches = 0;
-
-    const allButtons = document.querySelectorAll('.word');
-    allButtons.forEach(button => {
-      button.classList.remove('incorrect', 'correct', 'selected');
-      button.disabled = false;
-    });
-
+      const endGameButtons = document.getElementById('end-game-buttons');
+      if (endGameButtons) {
+        endGameButtons.remove();
+      }
+    
+      // Reset round and correct matches
+      correctMatches = 0;
+      round = 1;
+    
+      // Update round display
+      document.getElementById('round-selection').textContent = `Round ${round}`;
+    
+      // Reset buttons
+      const allButtons = document.querySelectorAll('.word');
+      allButtons.forEach(button => {
+        button.classList.remove('incorrect', 'correct', 'selected');
+        button.disabled = false;
+      });
     
 
     shuffleButtons();
