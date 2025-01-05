@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }else {
           setTimeout(() => {
             showEndGameButtons();
-          }, 1500);
+          }, 1000);
         }
 
       }
