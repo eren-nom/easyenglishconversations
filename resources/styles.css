@@ -309,7 +309,7 @@ footer p {
 footer a {
     text-decoration: underline; 
     color: #d6d3d3;
-    -webkit-tap-highlight-color: #f7aab8; 
+    -webkit-tap-highlight-color: transparent; 
 }
 
 footer a:hover {
