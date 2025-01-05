@@ -3,7 +3,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    -webkit-tap-highlight-color: transparent;
       
 }
 
@@ -243,7 +242,7 @@ footer p {
 footer a {
     color: #d6d3d3; 
     text-decoration: underline; 
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: #f7aab8;
     }
     
 footer a:hover {
@@ -353,7 +352,7 @@ footer p {
 footer a {
     color: #d6d3d3; 
     text-decoration: underline; 
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: #f7aab8;
 }
 
 footer a:hover {

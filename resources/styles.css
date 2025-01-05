@@ -1,8 +1,9 @@
 /* General Reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
 
 html, body {
@@ -75,7 +76,7 @@ main {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: #f7aab8;
     }
 
 
@@ -103,7 +104,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: #f7aab8;
 
 }
 
@@ -217,8 +218,6 @@ main {
         border: 1px solid #353535; 
     }
 
-    
-    
 
     header h1 {
         font-size: 2em; 
@@ -310,7 +309,7 @@ footer p {
 footer a {
     text-decoration: underline; 
     color: #d6d3d3;
-    -webkit-tap-highlight-color: transparent; 
+    -webkit-tap-highlight-color: #f7aab8; 
 }
 
 footer a:hover {
