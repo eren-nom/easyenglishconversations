@@ -187,11 +187,10 @@ button.incorrect {
     cursor: pointer;
     font-size: 1.3em;
     height: auto;
-    padding: 15px 30px 50px;
+    padding: 15px 30px;
     transition: background-color 0.3s ease;
     width: 300px;
 }
-
 
 /* Style for the link */
 .back-to-conversation, .back-to-main {
@@ -297,6 +296,11 @@ footer a:hover {
         padding: 8px;
         width: 130px; 
     }
+
+    #end-game-buttons {
+        flex-direction: column; 
+    }
+
 }
 
 /* For screens 670px and below */
@@ -327,7 +331,7 @@ footer a:hover {
         gap: 10px; 
     }
 
-    .end-game-button {
+    .end-game-button, .end-round-button {
         font-size: 1em;
         height: 60px;
         width: 120px;
