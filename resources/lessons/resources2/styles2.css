@@ -130,7 +130,7 @@ main {
     color: #353535;
     text-decoration: none;
     font-size: 0.8em;
-    -webkit-tap-highlight-color: #f7aab8;
+    -webkit-tap-highlight-color: transparent;
 
 }
 
@@ -151,7 +151,7 @@ main {
     font-size: 16px; 
     font-weight: bold; 
     transition: color 0.3s ease; 
-    -webkit-tap-highlight-color: #f7aab8;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Hover effect for the link */
@@ -169,7 +169,7 @@ main {
 .game-button {
     text-align: center;
     padding: 20px;
-    -webkit-tap-highlight-color: #f7aab8;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .game-button-text {
@@ -186,7 +186,7 @@ main {
     max-width: 100%;
     align-self: center; 
     margin-top: 2em; 
-    -webkit-tap-highlight-color: #f7aab8;
+    -webkit-tap-highlight-color: transparent;
     }
     
 
