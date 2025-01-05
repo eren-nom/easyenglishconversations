@@ -198,10 +198,10 @@ main {
         transform: scale(0.98); 
     }
 
-    button:focus, .end-game-button:focus {
+    /*button:focus, .end-game-button:focus {
         background-color: #f7aab8;
         outline: none; 
-    }
+    }*/
 
 /* Responsive Design */
 
