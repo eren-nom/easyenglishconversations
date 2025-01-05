@@ -124,13 +124,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (correctMatches === 5) {
           if (round < 4) {
+          // Wait before transitioning to the next round
+          setTimeout(() => {   
             round++;
             shuffleButtons();
             correctMatches = 0;
-          } else {
+          }, 1000); // 1 second delay
+        }else {
+          setTimeout(() => {
             showEndGameButtons();
-          }
+          }, 1500);
         }
+
+      }
+
       } else {
         selectedEnglishButton.classList.add('incorrect');
         selectedJapaneseButton.classList.add('incorrect');
