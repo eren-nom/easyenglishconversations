@@ -22,7 +22,7 @@ header {
     padding: 1em 0;
 }
 
-header h1 {
+h1 {
     font-size: 4em;
     margin-bottom: 0.2em;
     padding-top: 0.5em;
@@ -37,7 +37,7 @@ header h1 {
 }
 
 
-.subheader h2 {
+h2 {
     text-decoration: none;
     color: #f9f9f9;
     font-size: 2em;
@@ -75,6 +75,7 @@ main {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    -webkit-tap-highlight-color: transparent;
     }
 
 
@@ -92,8 +93,6 @@ main {
     height: auto; 
     border: 1.8px, solid,  #353535;
     border-radius: 10px;
-    outline: none !important;
-
 }
 
 .square a {
@@ -104,7 +103,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
 
 }
 

@@ -22,7 +22,7 @@ header {
     padding: 1em 0;
 }
 
-header h1 {
+h1 {
     font-size: 4em;
     margin-bottom: 0.2em;
     padding-top: 0.5em;
@@ -37,7 +37,7 @@ header h1 {
 }
 
 
-.subheader h2 {
+h2 {
     text-decoration: none;
     color: #f9f9f9;
     font-size: 2em;
