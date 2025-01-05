@@ -130,6 +130,7 @@ main {
     color: #353535;
     text-decoration: none;
     font-size: 0.8em;
+    -webkit-tap-highlight-color: transparent;
 
 }
 
@@ -150,12 +151,14 @@ main {
     font-size: 16px; 
     font-weight: bold; 
     transition: color 0.3s ease; 
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Hover effect for the link */
 .back-to-main a:hover {
     color: rgb(126, 31, 255); 
     text-decoration: underline;
+
 }
 
 /* Active state for the link */
@@ -331,6 +334,7 @@ footer p {
 footer a {
     text-decoration: underline; 
     color: #d6d3d3; 
+    -webkit-tap-highlight-color: transparent;
 }
 
 footer a:hover {

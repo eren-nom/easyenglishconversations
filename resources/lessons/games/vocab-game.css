@@ -226,8 +226,10 @@ button.incorrect {
 
 /* Footer Styling */
 footer {
-    background-color: #4e4e4e;
-    color: #f9f9f9;
+    background-color: #4e4e4e;;
+    color: #d6d3d3;
+    font-size: 1em;
+    line-height: 2.5em;
     margin-top: 2em;
     padding: 1em 0;
     text-align: center;
@@ -235,6 +237,17 @@ footer {
 
 footer p {
     font-size: clamp(0.8rem, 2.5vw, 1em); /* Responsive footer font size */
+}
+
+    
+footer a {
+    color: #d6d3d3; 
+    text-decoration: underline; 
+    -webkit-tap-highlight-color: transparent;
+    }
+    
+footer a:hover {
+    color: rgb(149, 148, 150); 
 }
 
 
@@ -252,8 +265,6 @@ footer p {
         width: 100%; 
 
         }
-
-
     }
 
 /* For screens 375px and below */
@@ -307,9 +318,9 @@ footer p {
 
     button.word {
         font-size: 1em;
-        height: 60px; /* Fixed height */
+        height: 60px;
         padding: 10px;
-        width: 140px; /* Fixed width */
+        width: 140px; 
     }
 
     #end-buttons {
@@ -342,6 +353,7 @@ footer p {
 footer a {
     color: #d6d3d3; 
     text-decoration: underline; 
+    -webkit-tap-highlight-color: transparent;
 }
 
 footer a:hover {
