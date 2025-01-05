@@ -92,6 +92,7 @@ main {
     height: auto; 
     border: 1.8px, solid,  #353535;
     border-radius: 10px;
+    outline: none !important;
 
 }
 
@@ -103,6 +104,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none !important;
 
 }
 
@@ -126,7 +128,6 @@ main {
     background-color: rgb(241, 188, 197);
     transform: scale(0.98); 
 }
-
 
 
 /* Responsive Design for Smaller Screens */

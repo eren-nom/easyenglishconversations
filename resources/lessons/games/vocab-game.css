@@ -147,7 +147,7 @@ button.correct {
     background-color: #cccccc;
     color: black;
     opacity: 0.3;
-    transition: opacity 0.1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 button.correct:hover {

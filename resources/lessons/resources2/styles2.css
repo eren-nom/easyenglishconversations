@@ -167,7 +167,6 @@ main {
     text-align: center;
     padding: 20px;
     -webkit-tap-highlight-color: transparent;
-    outline: none !important;
 }
 
 .game-button-text {
@@ -185,8 +184,6 @@ main {
     align-self: center; 
     margin-top: 2em; 
     -webkit-tap-highlight-color: transparent;
-    outline: none !important;
-
     }
     
 
@@ -199,6 +196,11 @@ main {
     .game-button-text:active {
         background-color: rgb(241, 188, 197);
         transform: scale(0.98); 
+    }
+
+    button:focus, .end-game-button:focus {
+        background-color: #f7aab8;
+        outline: none; 
     }
 
 /* Responsive Design */
